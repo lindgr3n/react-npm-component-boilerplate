@@ -2,15 +2,13 @@
 
 My first open source project. Be nice :)
 
-The package is based on [react-npm-component-boilerplate](https://github.com/lindgr3n/react-npm-component-boilerplate) package by [Johan](https://github.com/lindgr3n) which is really great when you want to set up npm package. This one is prepared to be used as a starter point for React components which needs to be published on Npm.
+Easy way to set up a react component as a npm package. A starter point for React components that you want to be published on Npm.
 
 Bundled with [Webpack 2](https://webpack.js.org/)
 
 It includes linting with [ESLint](http://eslint.org/) and testing with [Jest](http://facebook.github.io/jest/), [Enzyme](http://airbnb.io/enzyme/).
 
-Also there is of course ES6 transpilation.
-
-Documentation heavy inspired by [Kadira](https://github.com/kadirahq) and the [npm-base](https://github.com/kadirahq/npm-base) package.
+Documentation heavy inspired by [Julian Ćwirko](https://github.com/juliancwirko) and the [https://github.com/juliancwirko/react-npm-boilerplate](https://github.com/juliancwirko/react-npm-boilerplate) package.
 
 ## Usage
 Im using yarn but just replace with npm if you want.
@@ -35,10 +33,6 @@ E.g. this folder structure
 
 - [Creating React NPM packages with ES2015 and Webpack 2](https://LINK TO GITHUB PAGE)
 
-## Also check out
-
-- [React Cookie-Notification component](https://github.com/lindgr3n/react-cookie-notification)
-Built by using this package
 
 ## License
 
