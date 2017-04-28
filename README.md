@@ -28,11 +28,6 @@ E.g. this folder structure
         react-npm-boilerplate
         
 9. TODO: how to publish package
- 
-## Blog post about it:
-
-- [Creating React NPM packages with ES2015 and Webpack 2](https://LINK TO GITHUB PAGE)
-
 
 ## License
 
@@ -51,28 +46,7 @@ Will get some error like this:
         Warning: ReactTestUtils has been moved to react-dom/test-utils. Update references to remove this warning.
         console.error node_modules/fbjs/lib/warning.js:36
         Warning: Shallow renderer has been moved to react-test-renderer/shallow. Update references to remove this warning.`
-   
-
-## TO DO
-* Publish to github
-* Connect to CI
-* badge
-* Update githubpage with information
-* Remove converage folder at publish
-* Clear dist folder before build
-* Clear node_module folder at publish
-* Do i have any uneccessary packages?
-* Do i need vendor and manifest? Try just vendor
-./index.js need correct require vendor, manifest my just vendor?
-* Update tests
-* Update license?
-* Better way of handling config/jest *Transform files or polyfills?
-* Eslint working?
-* Watch for updates test
-* Move jest configuration from package.json  
-* Make so you can create a skeleton from this package as a global dependecy
-instead of clone and remove git references.
-
+        
 ## Resources
 * http://kloc.io/setting-up-react-workflow-babel-webpack/
 * https://facebook.github.io/jest/docs/webpack.html
