@@ -24,28 +24,7 @@ E.g. this folder structure
     ./workspace/
         MyProject
         react-npm-boilerplate
-        
-9. TODO: how to publish package
 
 ## License
 
 MIT
-
-## Good to know
-As of now you need to install react-test-renderer to skip warnings from jest: 
-
-`yarn add -D react-test-renderer` 
-
-**Source:** https://github.com/airbnb/enzyme/issues/875
-
-Will get some error like this:
-
-    `console.error node_modules/fbjs/lib/warning.js:36
-        Warning: ReactTestUtils has been moved to react-dom/test-utils. Update references to remove this warning.
-        console.error node_modules/fbjs/lib/warning.js:36
-        Warning: Shallow renderer has been moved to react-test-renderer/shallow. Update references to remove this warning.`
-        
-## Resources
-* http://kloc.io/setting-up-react-workflow-babel-webpack/
-* https://facebook.github.io/jest/docs/webpack.html
-* https://webpack.js.org/guides/code-splitting-libraries/#manifest-file
