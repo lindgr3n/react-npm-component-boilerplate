@@ -3,12 +3,14 @@
   "version": "1.0.0",
 
   "scripts": {
+    "prepublish": "npm run build",
     "build": "webpack --config webpack.config.babel.js",
-    "release": "webpack --p --config webpack.config.babel.js",
-    "test": "jest",
-    "coverage": "jest --coverage",
-    "deploy": "",
-    "lint": "eslint ./src"
+    "release": "npm run webpack -- --p",
+    "test": "npm run lint && jest",
+    "test-watch": "npm run test -- --watch",
+    "test-coverage": "npm run test -- --coverage",
+    "lint": "eslint ./src",
+    "lint-fix": "eslint ./src --fix"
   },
 
   "peerDependencies": {

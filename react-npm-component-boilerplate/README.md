@@ -1,5 +1,3 @@
-[![CircleCI](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate.svg?style=svg)](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate)
-
 # Boilerplate for creating React-component npm packages with ES2015
 
 Starter point for React components that you want to be published on Npm.
