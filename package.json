@@ -7,6 +7,7 @@
     "url": "https://github.com/lindgr3n/react-npm-component-boilerplate.git"
   },
   "scripts": {
+    "prepublish": "npm run lint && npm run jest",
     "test": "jest",
     "lint": "eslint ./src"
   },
