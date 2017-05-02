@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate.svg?style=svg)](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate)
+
 # Boilerplate for creating React-component npm packages with ES2015
 
 Starter point for React components that you want to be published on Npm.
@@ -10,7 +12,7 @@ Documentation heavy inspired by [Julian Ćwirko](https://github.com/juliancwirko
 
 ## Usage
 Im using yarn but just replace with npm if you want.
-1. Install module as global `yarn global add react-npm-component-boilerplate` or `npm install -g react-npm-component-boilerplate`
+1. Install modules `yarn ` or `npm install`
 2. Update `package.json` with your package name.
 3. If you want to run tests: `yarn run test` or `npm run test-watch`. You need to write tests in `__tests__` folder or as `.test.js`.
 4. If you want to run linting: `yarn run lint`. Fix bugs: `npm run lint-fix`. You can adjust your `.eslintrc` config file.
@@ -25,11 +27,6 @@ E.g. this folder structure
         MyProject
         react-npm-boilerplate
         
-9. TODO: how to publish package
-
-## License
-
-MIT
 
 ## Good to know
 As of now you need to install react-test-renderer to skip warnings from jest: 
