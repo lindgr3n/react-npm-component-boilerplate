@@ -1,6 +1,8 @@
 # Boilerplate for creating React-component npm packages with ES2015
 
-My first open source project. Be nice :)
+yarn global add react-npm-component-boilerplate
+npm install -g react-npm-component-boilerplate
+react-npm-component-boilerplate my-component
 
 Easy way to set up a react component as a npm package. A starter point for React components that you want to be published on Npm.
 
@@ -12,9 +14,9 @@ Documentation heavy inspired by [Julian Ćwirko](https://github.com/juliancwirko
 
 ## Usage
 Im using yarn but just replace with npm if you want.
-1. Clone this repo
-2. Inside cloned repo run `yarn install && rm -rf .git && git init` and update `package.json` with your package name.
-3. If you want to run tests: `yarn run test` or `yarn run testonly` or `npm run test-watch`. You need to write tests in `__tests__` folder or as `.test.js`.
+1. Install module as global `yarn global add react-npm-component-boilerplate` or `npm install -g react-npm-component-boilerplate`
+2. Update `package.json` with your package name.
+3. If you want to run tests: `yarn run test` or `npm run test-watch`. You need to write tests in `__tests__` folder or as `.test.js`.
 4. If you want to run linting: `yarn run lint`. Fix bugs: `npm run lint-fix`. You can adjust your `.eslintrc` config file.
 5. If you want to run test: `yarn run test`
 6. Bundle with `yarn run build`
