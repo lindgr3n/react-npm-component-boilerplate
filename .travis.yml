@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+cache:
+  yarn: true
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+notifications:
+  email: false
+node_js:
+    - '6.9.5'
+before_install:
+    - yarn
