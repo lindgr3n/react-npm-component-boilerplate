@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate.svg?style=svg)](https://circleci.com/gh/lindgr3n/react-npm-component-boilerplate)
+[![Travis](https://travis-ci.org/lindgr3n/react-npm-component-boilerplate.svg?branch=master)](https://travis-ci.org/lindgr3n/react-npm-component-boilerplate.svg?branch=master)
 
 # Boilerplate for creating React-component npm packages with ES2015
 
