@@ -13,7 +13,7 @@ Documentation heavy inspired by [Julian Ćwirko](https://github.com/juliancwirko
 ## Usage
 Im using yarn but just replace with npm if you want.
 1. Install module as global `yarn global add react-npm-component-boilerplate` or `npm install -g react-npm-component-boilerplate`
-2. Create your template `react-npm-component-boilerplate you-component-name` 
+2. Create your template `react-npm-component-boilerplate your-component-name` 
 3. Step into your created template `cd your-component-name`
 4. Update `package.json` with your package name.
 5. Install modules with `yarn` or `npm install` 
