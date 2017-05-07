@@ -1,28 +1,24 @@
 {
   "name": "react-npm-component-boilerplate-template",
   "version": "1.0.0",
-
   "scripts": {
-    "prepublish": "npm run build",
     "build": "webpack --config webpack.config.babel.js",
-    "release": "npm run webpack -- --p",
-    "test": "npm run lint && jest",
-    "test-watch": "npm run test -- --watch",
-    "test-coverage": "npm run test -- --coverage",
+    "release": "webpack --p --config webpack.config.babel.js",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "deploy": "",
     "lint": "eslint ./src",
-    "lint-fix": "eslint ./src --fix"
+    "build-examples": "webpack --config examples/webpack.config.babel.js --progress",
+    "start": "webpack-dev-server --config examples/webpack.config.live.babel.js"
   },
-
   "peerDependencies": {
     "react": "~0.14.8 || ^15.0.0",
     "react-dom": "~0.14.8 || ^15.0.0"
   },
-
   "dependencies": {
     "react": "^15.5.4",
     "react-cookie": "^1.0.5"
   },
-
   "devDependencies": {
     "babel-eslint": "^7.2.2",
     "babel-jest": "^19.0.0",
@@ -38,11 +34,12 @@
     "jest": "^19.0.2",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
+    "react-hot-loader": "next",
     "react-test-renderer": "^15.5.4",
     "style-loader": "^0.16.1",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
   },
-
   "jest": {
     "modulePaths": [
       "./src"
