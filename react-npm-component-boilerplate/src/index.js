@@ -17,8 +17,6 @@ class MyComponent extends React.Component {
             <div className="my-component">
                 <i className="icon-test">One</i><br></br>
                 <i className="icon-test">Two</i><br></br>
-                <i className="icon-test">Two</i><br></br>
-                <i className="icon-test">Two</i><br></br>
                 <i className="icon-test">Three</i>
             </div>
         )
