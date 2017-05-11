@@ -52,12 +52,12 @@ const appName = path.basename(destination);
 // Validate foldername
 fs.ensureDirSync(directory_name);
 
-console.log(`AppName: ${chalk.cyan(appName)} `);
-console.log(`Creating boilerplate in ${chalk.cyan(destination)}`);
+console.log(`  AppName: ${chalk.cyan(appName)} `);
+console.log(`  Creating boilerplate in ${chalk.cyan(destination)}`);
 
 // TODO: Validate so files already exist
 // Copy template files to specified directory
-const copyPromise = fs.copy(source_template, destination);
+const copyPromise = fs.copy(source_template, destination, {overwrite: false, errorOnExist: true});
 copyPromise.then(() => {
     templateJson.name = appName;
 
@@ -79,11 +79,12 @@ copyPromise.then(() => {
     fs.writeJson(destination+'/package.json', templateJson, err => {
         if (err) return console.error(err)
 
-        console.log(`Done copying files! ${chalk.cyan('Happy Coding!')}`);
+        console.log(`  Done copying files! ${chalk.cyan('Happy Coding!')}`);
     });
 })
 .catch(err => {
-    console.error(err)
+    console.log(`  Sorry, Im afraid that folder already exist!`);
+    console.log(`  Please manually remove folder or use another ${chalk.green('<project-name>')}`);
 });
 
 
