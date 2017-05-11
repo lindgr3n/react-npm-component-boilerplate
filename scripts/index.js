@@ -4,6 +4,7 @@ const path = require('path');
 const commander = require('commander');
 
 const packageJson = require('../package.json');
+const templateJson = require('../react-npm-component-boilerplate/package.json');
 
 let directory_name;
 
@@ -11,11 +12,10 @@ const program = new commander.Command(packageJson.name)
     .version(packageJson.version)
     .arguments('<project-name>')
     .option('-u, --username <username>', 'Github username to autopopulate links i package.json')
-    .description('Boilerplate to generate files needed to create a react component.')
+    .description('Boilerplate to generate files to help you create a react component.')
     .action(name => {
         directory_name = name;
-        console.log(`${chalk.cyan(directory_name)}`);
-    });
+    })
 
     program.on('--help', function(){
         console.log('  Examples:');
@@ -52,14 +52,40 @@ const appName = path.basename(destination);
 // Validate foldername
 fs.ensureDirSync(directory_name);
 
-console.log("AppName: " + appName);
-console.log(`Creating boilerplate in ${chalk.green(destination)}`);
+console.log(`AppName: ${chalk.cyan(appName)} `);
+console.log(`Creating boilerplate in ${chalk.cyan(destination)}`);
 
 // TODO: Validate so files already exist
 // Copy template files to specified directory
-fs.copySync(source_template, destination);
+const copyPromise = fs.copy(source_template, destination);
+copyPromise.then(() => {
+    templateJson.name = appName;
 
-console.log(`Done copying files! ${chalk.green('Happy Coding!')}`);
+    if(program.username) {
+        templateJson.repository.url = templateJson.repository.url.replace('#USER_NAME#', program.username);
+        templateJson.repository.url = templateJson.repository.url.replace('#APP_NAME#', appName);
+        templateJson.author = program.username;
+        templateJson.bugs.url = templateJson.bugs.url.replace('#USER_NAME#', program.username);
+        templateJson.bugs.url = templateJson.bugs.url.replace('#APP_NAME#', appName);
+        templateJson.homepage = templateJson.homepage.replace('#USER_NAME#', program.username);
+        templateJson.homepage = templateJson.homepage.replace('#APP_NAME#', appName);
+    }else {
+        delete templateJson.repository;
+        delete templateJson.author;
+        delete templateJson.bugs;
+        delete templateJson.homepage;
+    }
+
+    fs.writeJson(destination+'/package.json', templateJson, err => {
+        if (err) return console.error(err)
+
+        console.log(`Done copying files! ${chalk.cyan('Happy Coding!')}`);
+    });
+})
+.catch(err => {
+    console.error(err)
+});
+
 
 // TODO: Run yarn/npm install
 /*

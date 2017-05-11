@@ -1,6 +1,15 @@
 {
-  "name": "react-npm-component-boilerplate-template",
+  "name": "#APP_NAME#",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/#USER_NAME#/#APP_NAME#.git"
+  },
+  "author": "#USER_NAME#",
+  "bugs": {
+    "url": "https://github.com/#USER_NAME#/#APP_NAME#/issues"
+  },
+  "homepage": "https://github.com/#USER_NAME#/#APP_NAME#",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
     "release": "webpack --p --config webpack.config.babel.js",
