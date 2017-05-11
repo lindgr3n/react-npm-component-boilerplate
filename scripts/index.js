@@ -1,16 +1,39 @@
 const chalk = require('chalk');
 const fs = require('fs-extra');
 const path = require('path');
+const commander = require('commander');
 
 const packageJson = require('../package.json');
 
-let directory_name = process.argv[2];
-const args = process.argv.slice(3);
+let directory_name;
 
-if(!directory_name) {
+const program = new commander.Command(packageJson.name)
+    .version(packageJson.version)
+    .arguments('<project-name>')
+    .option('-u, --username <username>', 'Github username to autopopulate links i package.json')
+    .description('Boilerplate to generate files needed to create a react component.')
+    .action(name => {
+        directory_name = name;
+        console.log(`${chalk.cyan(directory_name)}`);
+    });
+
+    program.on('--help', function(){
+        console.log('  Examples:');
+        console.log('');
+        console.log(`    $ ${chalk.cyan(packageJson.name)} ${chalk.green('my-component')} `);
+        console.log(`    $ ${chalk.cyan(packageJson.name)} -h`);
+        console.log('');
+        console.log(`Got a problem please file an issue at: `);
+        console.log(`${chalk.cyan(`${packageJson.bugs.url}`)}`);
+        console.log('');
+    });
+
+program.parse(process.argv);   // Define commands and their options
+
+if(typeof directory_name === 'undefined') {
     console.log();
     console.error('Please specify the project directory:');
-    console.log(`  ${chalk.cyan(packageJson.name)} ${chalk.green('<directory>')}`);
+    console.log(`  ${chalk.cyan(packageJson.name)} ${chalk.green('<project-name>')}`);
     console.log();
     console.log('For example:');
     console.log(`  ${chalk.cyan(packageJson.name)} ${chalk.green('my-component')}`);
@@ -18,17 +41,6 @@ if(!directory_name) {
     console.log(`Run ${chalk.cyan(`${packageJson.name} --help`)} to see all options.`);
     console.log();
     process.exit(1);
-}
-
-switch (directory_name) {
-    case '--help':
-        console.log();
-        console.log(`Create a new component by using ${chalk.green(packageJson.name)} ${chalk.green('my-component')}.`);
-        console.log(`Got a problem please file an issue at ${chalk.cyan(`${packageJson.bugs.url}`)}.`);
-        process.exit(1);
-        break;
-    default:
-        break;
 }
 
 const source = __dirname;
