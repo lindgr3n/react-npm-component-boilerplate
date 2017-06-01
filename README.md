@@ -12,50 +12,40 @@ Starter point for creating [React](https://facebook.github.io/react/) components
 ## Usage
 
 1. Install module as global 
-```
-$ yarn global add react-npm-component-boilerplate
-```
+    > yarn global add react-npm-component-boilerplate
+
 2. Create your template 
-```
-$ react-npm-component-boilerplate your-component-name
-```
+    > react-npm-component-boilerplate your-component-name
+    
+    * Or if you want to autoset links in package.json add username 
+    > react-npm-component-boilerplate -u your-github-username your-component-name
+
 3. Step into your created template 
-```
-$ cd your-component-name
-```
+    > cd your-component-name
+
 4. Check **_package.json_** so that the information is correct.
+
 5. Install modules with 
-```
-$ yarn
-```
+    > yarn
+
 6. Start example and start coding! 
-```
-$ yarn start
-```
+    > yarn start
+
 ___
 ### Extra
 * If you want to run tests: 
-```
-$ yarn test
-``` 
+    > yarn test 
 * You need to write tests in `__tests__` folder or as `.test.js`.
 * It you want to keep watch run: 
-```
-yarn test-watch
-```
+    > yarn test-watch
 * If you want coverage run: 
-```
-yarn test-coverage
-```
+    > yarn test-coverage
 * If you want to run eslint: 
-```
-yarn lint
-```
+    > yarn lint
 * If you want to automatically fix lint problems run :
-```
-yarn lint-fix
-``` 
-Adjust your `.eslintrc` config file to your own preference.
+    > yarn lint-fix
+
+    Adjust your `.eslintrc` config file to your own preference.
 
 ## NPM equivalent
 yarn | npm
@@ -74,10 +64,11 @@ ____
 
 If you want to test if it works correctly in another project you can use npm `npm install -S ../mytest-component` Note the relative path and name of module
 E.g. this folder structure
-
+```
     ./workspace/
         MyProject
         react-npm-boilerplate
+```
 
 ## License
 

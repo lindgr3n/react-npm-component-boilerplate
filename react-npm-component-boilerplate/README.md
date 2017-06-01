@@ -10,14 +10,12 @@ Starter point for creating [React](https://facebook.github.io/react/) components
 ## Usage
 
 1. Install modules 
-```
-$ yarn
-```
+    > yarn
+
 2. Check **_package.json_** so that the information is correct.
 3. Start example and start coding! 
-```
-$ yarn start
-``` 
+    > yarn start
+
 4. Bundle with `yarn build`
 5. To test if it works correctly in another project you can use npm `npm install -S ../react-npm-component-boilerplate` Note the relative path
 
@@ -29,26 +27,21 @@ E.g. this folder structure
 ```
 ### Extra
 * If you want to run tests: 
-```
-$ yarn test
-``` 
+    > yarn test
+
 * You need to write tests in `__tests__` folder or as `.test.js`.
 * It you want to keep watch run: 
-```
-yarn test-watch
-```
+    > yarn test-watch
+
 * If you want coverage run: 
-```
-yarn test-coverage
-```
+    > yarn test-coverage
+
 * If you want to run eslint: 
-```
-yarn lint
-```
+    > yarn lint
+
 * If you want to automatically fix lint problems run :
-```
-yarn lint-fix
-``` 
+    > yarn lint-fix
+
 Adjust your `.eslintrc` config file to your own preference.
 
 ## NPM equivalent

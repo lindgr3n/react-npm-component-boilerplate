@@ -24,12 +24,13 @@
     "npm",
     "module",
     "template",
-    "webpack 2"
+    "webpack 2",
+    "HMR"
   ],
   "bin": {
     "react-npm-component-boilerplate": "bin/index.js"
   },
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "dependencies": {
     "chalk": "^1.1.3",
     "commander": "^2.9.0",

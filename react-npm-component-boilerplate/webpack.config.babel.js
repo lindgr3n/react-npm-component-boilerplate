@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+const packageJson = require('./package.json');
 
 export default () => ({
     entry: {
@@ -10,7 +11,7 @@ export default () => ({
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
-        library: 'react-npm-component-boilerplate',
+        library: packageJson.name,
         libraryTarget: 'umd',
     },
 
