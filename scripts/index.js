@@ -76,9 +76,10 @@ copyPromise.then(() => {
         delete templateJson.homepage;
     }
 
-    fs.writeJson(destination+'/package.json', templateJson, err => {
-        if (err) return console.error(err)
-
+    fs.writeFile(destination+'/package.json', JSON.stringify(templateJson, null, 2), err => {
+        if (err) {
+            return console.error(err);
+        }
         console.log(`  Done copying files! ${chalk.cyan('Happy Coding!')}`);
     });
 })
