@@ -24,24 +24,25 @@
     "npm",
     "module",
     "template",
-    "webpack 2",
-    "HMR"
+    "webpack",
+    "HMR",
+    "Jest"
   ],
   "bin": {
     "react-npm-component-boilerplate": "bin/index.js"
   },
   "preferGlobal": true,
   "dependencies": {
-    "chalk": "^1.1.3",
+    "chalk": "^2.3.0",
     "commander": "^2.9.0",
-    "fs-extra": "^3.0.0",
+    "fs-extra": "^4.0.2",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.19.0",
-    "eslint-plugin-react": "^6.10.3",
-    "jest": "^19.0.2"
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.9.0",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1"
   },
   "jest": {
     "modulePathIgnorePatterns": [
