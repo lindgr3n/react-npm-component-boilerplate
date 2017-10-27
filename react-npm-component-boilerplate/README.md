@@ -2,7 +2,7 @@
 
 Starter point for creating [React](https://facebook.github.io/react/) components that you can published on Npm.
 
-* Bundled with [Webpack 2](https://webpack.js.org/)
+* Bundled with [Webpack](https://webpack.js.org/)
 * Develop with Hot Module Replacement [(HMR)](https://webpack.js.org/concepts/hot-module-replacement/)
 * Includes linting with [ESLint](http://eslint.org/)
 * Testing with [Jest](http://facebook.github.io/jest/).
